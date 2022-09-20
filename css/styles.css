@@ -872,6 +872,7 @@ p {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 12px 12px 42px;
+  transition: border-color var(--animation-modal);
 }
 
 .form-textarea {
@@ -882,6 +883,11 @@ p {
   margin-bottom: 20px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+
+.close {
+  fill: currentColor;
+  transition: fill var(--animation-modal);
 }
 
 .form-label-accept {
@@ -902,7 +908,6 @@ p {
 
 .form-svg-checkbox {
   margin-right: 8px;
-  fill: var(--header-color);
 }
 
 .form-svg-checkbox-active {
