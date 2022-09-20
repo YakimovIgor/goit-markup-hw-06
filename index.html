@@ -452,40 +452,61 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <form class="modal-main">
-          <p>Залиште свої дані, ми вам передзвонимо</p>
+          <p class="title-form">Залиште свої дані, ми вам передзвонимо</p>
           <label class="form-label"
             >Ім'я
             <span class="form-imput">
               <input type="text" class="contact-form-input" name="user-name" />
-              <svg></svg>
+              <svg class="form-svg" width="18px" height="18px">
+                <use href="./images/modal.svg#icon-name"></use>
+              </svg>
             </span>
           </label>
           <label class="form-label"
             >Телефон
             <span class="form-imput">
               <input type="text" class="contact-form-input" name="user-phone" />
-              <svg></svg>
+              <svg class="form-svg" width="18px" height="18px">
+                <use href="./images/modal.svg#icon-phone"></use>
+              </svg>
             </span>
           </label>
           <label class="form-label"
             >Пошта
             <span class="form-imput">
               <input type="text" class="contact-form-input" name="user-mail" />
-              <svg></svg>
+              <svg class="form-svg" width="18px" height="18px">
+                <use href="./images/modal.svg#icon-mail"></use>
+              </svg>
             </span>
           </label>
           <label class="form-label"
             >Коментар
             <textarea
+              class="form-textarea"
               name="user-coment"
               rows="10"
               placeholder="Введіть текст"
             ></textarea>
           </label>
           <label class="form-label-accept">
-            <input type="text" type="checkbox" name="contract" />
-            <svg></svg>
+            <input
+              class="visually-hidden modal-check"
+              type="text"
+              type="checkbox"
+              name="contract"
+              checked
+            />
+            <svg class="form-svg-checkbox" width="18px" height="18px">
+              <use href="./images/modal.svg#icon-accept"></use>
+            </svg>
+            <svg class="form-svg-checkbox-active" width="18px" height="18px">
+              <use href="./images/modal.svg#icon-check"></use>
+            </svg>
+            Погоджуюся з розсилкою та приймаю
+            <a href="" class="accept">Умови договору</a>
           </label>
+          <button type="button" class="accept-button">Відправити</button>
         </form>
 
         <button type="button" class="closed" data-modal-close>

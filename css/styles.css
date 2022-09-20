@@ -774,6 +774,7 @@ p {
   transform: translate(-50%, -50%);
   min-width: 528px;
   min-height: 581px;
+  padding: 40px;
   background-color: var(--color);
   border-radius: 4px;
   transition: transform var(--animation-modal),
@@ -797,6 +798,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .post-image {
@@ -826,4 +828,110 @@ p {
 
 .post-image:hover .post-text {
   transform: translateY(0);
+}
+
+.title-form {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: var(--header-color);
+}
+
+.form-label {
+  display: block;
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+
+.modal-main {
+  width: 100%;
+  height: 100%;
+}
+
+.form-imput {
+  position: relative;
+}
+
+.form-svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  fill: var(--header-color);
+}
+
+.contact-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 12px 12px 42px;
+}
+
+.form-textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-label-accept {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--primary-text-color);
+}
+
+.accept {
+  color: var(--accent-color);
+}
+
+.form-svg-checkbox {
+  margin-right: 8px;
+  fill: var(--header-color);
+}
+
+.form-svg-checkbox-active {
+  display: none;
+  margin-right: 8px;
+  fill: var(--accent-color);
+}
+
+.accept-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  letter-spacing: 0.06em;
+  color: var(--color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  padding: 10px 52px;
+  cursor: pointer;
+}
+
+.contact-form-input:focus,
+.form-textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
 }
