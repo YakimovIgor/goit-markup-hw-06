@@ -445,6 +445,28 @@
               </li>
             </ul>
           </div>
+
+          <form class="footer-form">
+            <p class="footer-form-text">Підпишіться на розсилку</p>
+          
+          <div class="footer-form-container">
+            <label>
+              <input
+                type="text"
+                class="footer-form-input"
+                type="email"
+                name="user-mail"
+                placeholder="E-mail"
+              />
+            </label>
+            <button class="footer-button" type="submit">
+              Підписатися
+              <svg class="footer-send" width="24px" height="24px">
+                <use href="./images/modal.svg#icon-send"></use>
+              </svg>
+            </button>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
@@ -491,10 +513,13 @@
           </label>
           <label class="form-label-accept">
             <input
-              class="visually-hidden modal-check"
+              class="visually-hidden modal-check-active"
               type="text"
               type="checkbox"
               name="contract"
+              value="active"
+              required
+              checked
             />
             <svg class="form-svg-checkbox" width="18px" height="18px">
               <use href="./images/modal.svg#icon-accept"></use>
