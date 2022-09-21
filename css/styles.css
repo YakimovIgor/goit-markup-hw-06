@@ -906,16 +906,43 @@ p {
   color: var(--accent-color);
 }
 
-.modal-check-active:checked ~ .form-svg-checkbox-active {
-  fill: var(--accent-color);
-  margin-right: 8px;
+.visually-hidden-modal {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.form-label-accept {
+  position: relative;
+}
+
+.form-svg-checkbox,
+.form-svg-checkbox-active {
+  position: absolute;
+  left: 2%;
+}
+
+.form-svg-checkbox {
   opacity: 1;
 }
 
-.modal-check-active:checked ~ .form-svg-checkbox {
+.form-svg-checkbox-active {
   opacity: 0;
-  margin-right: 8px;
-  fill: none;
+}
+
+.visually-hidden.modal-check-active:checked ~ .form-svg-checkbox {
+  opacity: 0;
+}
+
+.visually-hidden.modal-check-active:checked ~ .form-svg-checkbox-active {
+  opacity: 1;
 }
 
 .accept-button {
