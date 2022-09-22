@@ -892,9 +892,7 @@ p {
 }
 
 .form-label-accept {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   margin-bottom: 30px;
 
   font-weight: 400;
