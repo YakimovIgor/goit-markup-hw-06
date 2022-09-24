@@ -801,6 +801,12 @@ p {
   cursor: pointer;
 }
 
+.close:hover,
+.close:focus {
+  fill: var(--accent-color);
+  background-color: transparent;
+}
+
 .post-image {
   position: relative;
   overflow: hidden;
@@ -841,12 +847,22 @@ p {
 
 .form-label {
   display: block;
-  padding-bottom: 10px;
-  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.form-label-coments {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.form-name {
+  display: block;
+  margin-bottom: 4px;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
+  position: relative;
 }
 
 .modal-main {
@@ -864,40 +880,46 @@ p {
   transform: translateY(-50%);
   left: 12px;
   fill: var(--header-color);
+  transition: fill var(--animation-modal);
 }
 
 .contact-form-input {
   width: 100%;
-  height: 40px;
+  height: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 12px 12px 12px 42px;
+  padding-left: 42px;
   transition: border-color var(--animation-modal);
 }
 
+.contact-form-input:focus + .form-svg {
+  fill: var(--accent-color);
+}
+
 .form-textarea {
+  display: block;
   width: 100%;
   height: 120px;
   resize: none;
   padding: 12px 16px;
-  margin-bottom: 20px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color var(--animation-modal);
 }
 
 .close {
-  fill: currentColor;
+  fill: var(--header-color);
   transition: fill var(--animation-modal);
 }
 
 .form-label-accept {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
 
-  font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   color: var(--primary-text-color);
 }
 
@@ -918,34 +940,25 @@ p {
   margin: -1px;
 }
 
-.checkbox-checkpoint {
+.form-svg-checkbox-active {
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  fill: var(--color);
+  border: 2px solid #000000;
+}
+
+.modal-check-active:checked + .form-svg-checkbox-active {
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.form-text-accept {
   position: relative;
-  padding-left: 37px;
 }
 
 .modal-check-active {
   position: absolute;
-}
-
-.form-svg-checkbox,
-.form-svg-checkbox-active {
-  position: absolute;
-  left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: opacity var(--animation-modal);
-}
-
-.form-svg-checkbox-active {
-  opacity: 0;
-}
-
-.modal-check-active:checked + .form-svg-checkbox {
-  opacity: 0;
-}
-
-.modal-check-active:checked ~ .form-svg-checkbox-active {
-  opacity: 1;
 }
 
 .accept-button {
@@ -974,10 +987,10 @@ p {
 }
 
 .footer-form-text {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14px;
+  line-height: 1.14;
   text-transform: uppercase;
   color: var(--color);
 }
@@ -999,10 +1012,10 @@ p {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: #2f303a;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color);
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.25px;
+  line-height: 1.25;
 }
 
 .footer-button {
@@ -1016,11 +1029,12 @@ p {
   color: var(--color);
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88px;
+  line-height: 1.88;
   text-align: center;
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .footer-send {
