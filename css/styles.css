@@ -799,12 +799,12 @@ p {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .close:hover,
 .close:focus {
   fill: var(--accent-color);
-  background-color: transparent;
 }
 
 .post-image {
@@ -916,11 +916,14 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
 
   font-size: 14px;
   line-height: 1.71;
   color: var(--primary-text-color);
+}
+
+.checkbox-checkpoint {
+  margin-bottom: 30px;
 }
 
 .accept {
